@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  border: solid red 2px;
+  box-sizing: border-box;
+  height: 300px;
+  width: 300px;
+}
+
+.block {
+  border: solid black 2px;
+  box-sizing: border-box;
+  flex: 1 1 auto;
+}
+
+.row {
+  border: solid blue 2px;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
