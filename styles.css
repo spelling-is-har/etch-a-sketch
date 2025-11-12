@@ -2,8 +2,6 @@
   display: flex;
   border: solid red 2px;
   box-sizing: border-box;
-  height: 300px;
-  width: 300px;
 }
 
 .block {
