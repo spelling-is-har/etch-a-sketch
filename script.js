@@ -1,5 +1,14 @@
-console.log("hello world");
 const container = document.querySelector(".container");
+const prompt = document.querySelector(".prompt");
+
+prompt.addEventListener("click", (event) => {
+  let size = window.prompt("Etch-a-Sketch size?");
+  if (size > 100) {
+    size = 16;
+    alert("Max size 100");
+  }
+  createGrid(size);
+});
 
 function createGrid(gridSize) {
   for (let i = 0; i < gridSize; i++) {
@@ -11,7 +20,6 @@ function createGrid(gridSize) {
     for (let j = 0; j < gridSize; j++) {
       const col = document.createElement("div");
       col.classList.add("block");
-      col.innerText = "c" + j;
 
       col.addEventListener("mouseover", (event) => {
         col.style.background = "red";
@@ -24,9 +32,3 @@ function createGrid(gridSize) {
 }
 
 createGrid(16);
-
-//for size
-//create row block
-// for size
-//  create col blocks
-//  append in loop

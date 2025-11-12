@@ -2,16 +2,16 @@
   display: flex;
   border: solid red 2px;
   box-sizing: border-box;
+  height: 960px;
+  width: 960px;
 }
 
 .block {
-  border: solid black 2px;
   box-sizing: border-box;
   flex: 1 1 auto;
 }
 
 .row {
-  border: solid blue 2px;
   flex: 1 1 auto;
   display: flex;
   flex-direction: column;
