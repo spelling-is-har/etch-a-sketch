@@ -7,8 +7,25 @@ prompt.addEventListener("click", (event) => {
     size = 16;
     alert("Max size 100");
   }
+
+  //deletes grid
+  deleteGrid();
+
+  //creates new grid
   createGrid(size);
 });
+
+function deleteGrid() {
+  //iterates over rows in grid and removes them, then does the same for row divs
+  const removeBlock = document.querySelector(".row");
+  while (removeBlock.firstChild) {
+    removeBlock.removeChild(removeBlock.lastChild);
+  }
+
+  while (container.firstChild) {
+    container.removeChild(container.lastChild);
+  }
+}
 
 function createGrid(gridSize) {
   for (let i = 0; i < gridSize; i++) {
