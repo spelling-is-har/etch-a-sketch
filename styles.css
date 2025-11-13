@@ -1,7 +1,7 @@
 body {
   display: flex;
   flex-direction: column;
-  margin: 0;
+  margin: 30px;
   align-items: center;
   justify-content: center;
 }
@@ -10,8 +10,8 @@ body {
   display: flex;
   border: solid red 2px;
   box-sizing: border-box;
-  width: 30vw;
-  height: 30vw;
+  width: 50vw;
+  height: 50vw;
 }
 
 .block {
@@ -29,12 +29,15 @@ body {
 
 .case {
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
   background-color: lightgrey;
   border-radius: 80px;
   border: none;
   padding: 50px;
-  max-width: 960px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0 0 0;
 }
