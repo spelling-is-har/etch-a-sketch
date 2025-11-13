@@ -1,14 +1,23 @@
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  align-items: center;
+  justify-content: center;
+}
+
 .container {
   display: flex;
   border: solid red 2px;
   box-sizing: border-box;
-  height: 960px;
-  width: 960px;
+  width: 30vw;
+  height: 30vw;
 }
 
 .block {
   box-sizing: border-box;
   flex: 1 1 auto;
+  display: flex;
 }
 
 .row {
@@ -16,4 +25,16 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.case {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: lightgrey;
+  border-radius: 80px;
+  border: none;
+  padding: 50px;
+  max-width: 960px;
 }
