@@ -3,6 +3,7 @@ const prompt = document.querySelector(".prompt");
 const colourButtonContainer = document.querySelector(".colourButtonContainer");
 const rowOne = document.querySelector(".rowOne");
 const rowTwo = document.querySelector(".rowTwo");
+let size = 16;
 const colours = [
   "black",
   "white",
@@ -17,10 +18,9 @@ const colours = [
 let paintColour = "black";
 
 prompt.addEventListener("click", (event) => {
-  let size = window.prompt("Etch-a-Sketch size?");
+  size = size + 16;
   if (size > 100) {
     size = 16;
-    alert("Max size 100");
   }
 
   //deletes grid
@@ -88,5 +88,5 @@ function createColourButtons() {
   colourButtonContainer.append(rowTwo);
 }
 
-createGrid(16);
+createGrid(size);
 createColourButtons();

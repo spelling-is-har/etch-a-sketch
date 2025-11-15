@@ -4,6 +4,7 @@ body {
   margin: 30px;
   align-items: center;
   justify-content: center;
+  background-color: #36454f;
 }
 
 .container {
@@ -55,10 +56,15 @@ body {
   border: none;
   justify-content: center;
   align-items: center;
-  box-shadow: 1px 0px #999, 2px 2px 0px #999, 3px 3px 0px #999, 4px 4px 0px #999,
-    5px 5px 0px #999;
+  box-shadow: 1px 1px 0px #999, 2px 2px 0px #999, 3px 3px 0px #999,
+    4px 4px 0px #999, 5px 5px 0px #999;
 }
 
+.prompt:active {
+  transform: rotate(45deg);
+  box-shadow: 1px 0px 0px #999, 2px 0px 0px #999, 3px 0px 0px #999,
+    4px 0px 0px #999, 5px 0px 0px #999, 6px 0px 0px #999, 7px 0px 0px #999;
+}
 .colourButtonContainer {
   display: flex;
   justify-content: center;
@@ -72,8 +78,15 @@ body {
 .colourButtonContainer button {
   width: 30px;
   height: 30px;
-  margin: 2px 2px 2px 2px;
+  margin: 3px 3px 3px 3px;
   padding: 0;
   border: none;
-  box-shadow: 1px 0px #999, 2px 2px 0px #999, 3px 3px 0px #999, 4px 4px 0px #999;
+  box-shadow: 1px 1px 0px #999, 2px 2px 0px #999, 3px 3px 0px #999,
+    4px 4px 0px #999;
+}
+
+.colourButtonContainer button:active {
+  transform: translateX(2px);
+  transform: translateY(2px);
+  box-shadow: 1px 1px 0px #999;
 }
