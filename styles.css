@@ -35,7 +35,6 @@ body {
   flex-direction: column;
   background-color: lightgrey;
   border-radius: 30px;
-  /* border: solid black 10px; */
   padding: 50px 50px 20px 50px;
   box-shadow: 1px 0px #999, 2px 2px 0px #999, 3px 3px 0px #999, 4px 4px 0px #999,
     5px 5px 0px #999, 6px 6px 0px #999, 7px 7px 0px #999, 8px 8px 0px #999,
@@ -48,7 +47,7 @@ body {
   padding: 20px 0 0 0;
 }
 
-.buttons button {
+.buttons .prompt {
   flex: 0 1 auto;
   height: 12vw;
   width: 12vw;
@@ -58,4 +57,23 @@ body {
   align-items: center;
   box-shadow: 1px 0px #999, 2px 2px 0px #999, 3px 3px 0px #999, 4px 4px 0px #999,
     5px 5px 0px #999;
+}
+
+.colourButtonContainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.colourButtonContainer div {
+  margin: 0px;
+}
+
+.colourButtonContainer button {
+  width: 30px;
+  height: 30px;
+  margin: 2px 2px 2px 2px;
+  padding: 0;
+  border: none;
+  box-shadow: 1px 0px #999, 2px 2px 0px #999, 3px 3px 0px #999, 4px 4px 0px #999;
 }

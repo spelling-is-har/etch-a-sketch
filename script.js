@@ -1,5 +1,20 @@
 const container = document.querySelector(".container");
 const prompt = document.querySelector(".prompt");
+const colourButtonContainer = document.querySelector(".colourButtonContainer");
+const rowOne = document.querySelector(".rowOne");
+const rowTwo = document.querySelector(".rowTwo");
+const colours = [
+  "black",
+  "white",
+  "blue",
+  "red",
+  "yellow",
+  "pink",
+  "green",
+  "orange",
+];
+
+let paintColour = "black";
 
 prompt.addEventListener("click", (event) => {
   let size = window.prompt("Etch-a-Sketch size?");
@@ -39,7 +54,7 @@ function createGrid(gridSize) {
       col.classList.add("block");
 
       col.addEventListener("mouseover", (event) => {
-        col.style.background = "red";
+        col.style.background = paintColour;
       });
       row.appendChild(col);
     }
@@ -48,4 +63,27 @@ function createGrid(gridSize) {
   }
 }
 
+function createColourButtons() {
+  for (colour of colours) {
+    const colourButton = document.createElement("button");
+    colourButton.style.backgroundColor = colour;
+
+    colourButton.addEventListener("click", (event) => {
+      console.log("hello");
+      paintColour = colour;
+    });
+
+    //if condition to decide if colour buttons should go in the top row or
+    //the bottom row depending on the amount of colour options
+    if (colours.indexOf(colour) < colours.length / 2) {
+      rowOne.appendChild(colourButton);
+    } else {
+      rowTwo.appendChild(colourButton);
+    }
+  }
+  colourButtonContainer.appendChild(rowOne);
+  colourButtonContainer.append(rowTwo);
+}
+
 createGrid(16);
+createColourButtons();
