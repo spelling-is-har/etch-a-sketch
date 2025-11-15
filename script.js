@@ -67,10 +67,12 @@ function createColourButtons() {
   for (colour of colours) {
     const colourButton = document.createElement("button");
     colourButton.style.backgroundColor = colour;
+    colourButton.classList.add(colour);
 
+    //add event listener to change colour accoding to buttons class
     colourButton.addEventListener("click", (event) => {
-      console.log("hello");
-      paintColour = colour;
+      console.log(colourButton.className);
+      paintColour = colourButton.className;
     });
 
     //if condition to decide if colour buttons should go in the top row or
@@ -81,6 +83,7 @@ function createColourButtons() {
       rowTwo.appendChild(colourButton);
     }
   }
+
   colourButtonContainer.appendChild(rowOne);
   colourButtonContainer.append(rowTwo);
 }
