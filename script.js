@@ -3,7 +3,9 @@ const prompt = document.querySelector(".prompt");
 const colourButtonContainer = document.querySelector(".colourButtonContainer");
 const rowOne = document.querySelector(".rowOne");
 const rowTwo = document.querySelector(".rowTwo");
-let size = 16;
+const clearButton = document.querySelector(".clear");
+
+let size = 15;
 const colours = [
   "black",
   "white",
@@ -17,10 +19,15 @@ const colours = [
 
 let paintColour = "black";
 
+clearButton.addEventListener("click", (event) => {
+  deleteGrid();
+  createGrid(size);
+});
+
 prompt.addEventListener("click", (event) => {
-  size = size + 16;
-  if (size > 100) {
-    size = 16;
+  size = size * 2;
+  if (size > 120) {
+    size = 15;
   }
 
   //deletes grid
