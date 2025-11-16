@@ -5,6 +5,26 @@ body {
   align-items: center;
   justify-content: center;
   background-color: #36454f;
+  padding: 0 0 10em 0;
+}
+
+h1 {
+  font-family: "Press Start 2P";
+  color: black;
+  font-size: 2rem;
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  background-color: bisque;
+  border-radius: 10px;
+  box-shadow: 1px 0px #999, 2px 2px 0px #999, 3px 3px 0px #999, 4px 4px 0px #999,
+    5px 5px 0px #999, 6px 6px 0px #999, 7px 7px 0px #999;
+  padding: 1em;
+  margin: 0 0 5rem 0;
 }
 
 .container {
@@ -46,6 +66,7 @@ body {
     5px 5px 0px #999, 6px 6px 0px #999, 7px 7px 0px #999, 8px 8px 0px #999,
     9px 9px 0px #999, 10px 10px 0px #999, 15px 15px 10px;
   transform: rotate(0.01turn);
+  margin: 0 0 10m 0;
 }
 
 .case:hover {
@@ -122,5 +143,5 @@ body {
 
 .clear:active {
   transform: translateX(2px) translateY(2px);
-  box-shadow: 1px 1px 0px darkred, 2px 2px 0px;
+  box-shadow: 1px 1px 0px darkred;
 }
